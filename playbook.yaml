@@ -22,27 +22,27 @@
             dest=/var/www/html/index.nginx-debian.html
             owner=root
             group=root
-            mode=0644
+            mode=0777
        - name: Copy the files to index destination folder.
          template: >
             src=/myrepo/index.j2
             dest=/var/www/html/index.j2
             owner=root
             group=root
-            mode=0644
+            mode=0777
        - name: Copy the style files to destination folder.
          copy: >
             src=/myrepo/style.css
             dest=/var/www/html/style.css
             owner=root
             group=root
-            mode=0644
+            mode=0777
        - name: Copy the javascript files to destination folder.
          copy: >
             src=/myrepo/scorekeeper.js
             dest=/var/www/html/scorekeeper.js
             owner=root
             group=root
-            mode=0644
+            mode=0777
        - name: restart nginx
          command: service nginx restart
